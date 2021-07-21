@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Al
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures", "DataStructures\DataStructures.csproj", "{C2877A36-7E8C-4383-A716-532F08242DD2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructureAndAlgorithms.Test", "TestDSAlgo\DataStructureAndAlgorithms.Test.csproj", "{ADFCB787-9EF0-4B1B-AAF0-6BFE657D6539}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructuresAndAlgorithms.Test", "DataStructuresAndAlgorithms.Test\DataStructuresAndAlgorithms.Test.csproj", "{ADFCB787-9EF0-4B1B-AAF0-6BFE657D6539}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

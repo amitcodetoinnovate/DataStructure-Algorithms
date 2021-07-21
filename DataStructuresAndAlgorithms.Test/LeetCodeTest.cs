@@ -2,7 +2,7 @@ using System;
 using Algorithms;
 using Xunit;
 
-namespace TestDSAlgo
+namespace DataStructureAndAlgorithms.Test
 {
     public class LeetCodeTest
     {
@@ -14,6 +14,7 @@ namespace TestDSAlgo
         {
             Assert.Equal(StockBuySellII.MaxProfitBF(prices),ans);
             Assert.Equal(StockBuySellII.MaxProfitBF(prices),ans);
+            Assert.Equal(StockBuySellII.MaxProfitOptimized(prices),ans);
         }
     }
 }
