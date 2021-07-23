@@ -1,5 +1,6 @@
-﻿using System;
-//https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+﻿/// <summary>
+/// //https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
+/// </summary>
 namespace Algorithms
 {
     public class StockBuySellII

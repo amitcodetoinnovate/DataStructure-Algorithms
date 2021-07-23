@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/// <summary>
+/// https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+/// </summary>
 namespace Algorithms.Leetcode
 {
     public class RemoveDuplicate
