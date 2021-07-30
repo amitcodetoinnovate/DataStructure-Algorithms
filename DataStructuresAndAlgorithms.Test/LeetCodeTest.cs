@@ -2,7 +2,6 @@ using System;
 using Algorithms;
 using Algorithms.Leetcode;
 using Xunit;
-//https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 
 namespace DataStructureAndAlgorithms.Test
 {
@@ -42,6 +41,16 @@ namespace DataStructureAndAlgorithms.Test
                 Assert.Equal(input[i], arr[j % arr.Length]);
             }
 
+        }
+        
+        [Theory]
+        [InlineData( 40,"XL")]
+        [InlineData( 9, "IX")]
+        [InlineData( 58, "LVIII")]
+        [InlineData(1994, "MCMXCIV")]
+        public void IntegerToRoman_Test(int num, string s)
+        {
+            Assert.Equal(IntegerToRoman.Solve(num),s);
         }
     }
 }
