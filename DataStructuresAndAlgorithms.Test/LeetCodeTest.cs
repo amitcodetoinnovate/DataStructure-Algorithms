@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Algorithms;
 using Algorithms.Leetcode;
 using Xunit;
@@ -42,15 +43,46 @@ namespace DataStructureAndAlgorithms.Test
             }
 
         }
-        
+
         [Theory]
-        [InlineData( 40,"XL")]
-        [InlineData( 9, "IX")]
-        [InlineData( 58, "LVIII")]
+        [InlineData(40, "XL")]
+        [InlineData(9, "IX")]
+        [InlineData(58, "LVIII")]
         [InlineData(1994, "MCMXCIV")]
         public void IntegerToRoman_Test(int num, string s)
         {
-            Assert.Equal(IntegerToRoman.Solve(num),s);
+            Assert.Equal(IntegerToRoman.Solve(num), s);
+        }
+
+        [Theory]
+        [InlineData("eceba", 3)]
+        [InlineData("ccaabbb", 5)]
+        public void LengthOfLongestSubstringTwoDistinct_Test(string s, int ans)
+        {
+            Assert.Equal(LengthOfLongestSubstringTwoDistinct.Solve(s), ans);
+        }
+
+        [Theory]
+        [InlineData(new string[] { "mission statement",
+                "a quick bite to eat",
+                "a chip off the old block",
+                "chocolate bar",
+                "mission impossible",
+                "a man on a mission",
+                "block party",
+                "eat my words",
+                "bar of soap" },
+            new string[]{"a chip off the old block party",
+                "a man on a mission impossible",
+                "a man on a mission statement",
+                "a quick bite to eat my words",
+                "chocolate bar of soap" })]
+        [InlineData(new string[] { "a", "b", "a" },
+            new string[] { "a" })]
+
+        public void BeforeAndAfterPuzzles_Test(string[] input, string[] output)
+        {
+            Assert.Equal(BeforeAndAfterPuzzles.Solve(input).ToArray(), output);
         }
     }
 }
