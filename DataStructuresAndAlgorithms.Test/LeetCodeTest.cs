@@ -84,5 +84,13 @@ namespace DataStructureAndAlgorithms.Test
         {
             Assert.Equal(BeforeAndAfterPuzzles.Solve(input).ToArray(), output);
         }
+
+        [Theory]
+        [InlineData("ADOBECODEBANC","ABC", "BANC")]
+        [InlineData("bdab","ab", "ab")]
+        public void MinimumWindowSubstring_Test(string s,string t,string ans)
+        {
+            Assert.Equal(MinimumWindowSubstring.Solve(s,t), ans);
+        }
     }
 }
