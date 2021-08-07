@@ -92,5 +92,16 @@ namespace DataStructureAndAlgorithms.Test
         {
             Assert.Equal(MinimumWindowSubstring.Solve(s,t), ans);
         }
+
+        [Theory]
+        [InlineData("1.01", "1.001", 0)]
+        [InlineData("1.0", "1.0.0", 0)]
+        [InlineData("0.1", "1.1", -1)]
+        [InlineData("1.0.1", "1", 1)]
+        
+        public void CompareVersionNumbers_Test(string version1, string version2, int ans)
+        {
+            Assert.Equal(CompareVersionNumbers.Solve(version1, version2), ans);
+        }
     }
 }
