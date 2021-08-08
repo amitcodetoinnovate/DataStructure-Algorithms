@@ -86,11 +86,11 @@ namespace DataStructureAndAlgorithms.Test
         }
 
         [Theory]
-        [InlineData("ADOBECODEBANC","ABC", "BANC")]
-        [InlineData("bdab","ab", "ab")]
-        public void MinimumWindowSubstring_Test(string s,string t,string ans)
+        [InlineData("ADOBECODEBANC", "ABC", "BANC")]
+        [InlineData("bdab", "ab", "ab")]
+        public void MinimumWindowSubstring_Test(string s, string t, string ans)
         {
-            Assert.Equal(MinimumWindowSubstring.Solve(s,t), ans);
+            Assert.Equal(MinimumWindowSubstring.Solve(s, t), ans);
         }
 
         [Theory]
@@ -98,10 +98,18 @@ namespace DataStructureAndAlgorithms.Test
         [InlineData("1.0", "1.0.0", 0)]
         [InlineData("0.1", "1.1", -1)]
         [InlineData("1.0.1", "1", 1)]
-        
+
         public void CompareVersionNumbers_Test(string version1, string version2, int ans)
         {
             Assert.Equal(CompareVersionNumbers.Solve(version1, version2), ans);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4 }, new int[] { 24, 12, 8, 6 })]
+        [InlineData(new int[] { -1, 1, 0, -3, 3 }, new int[] { 0, 0, 9, 0, 0 })]
+        public void ProductExceptSelf_Test(int[] input, int[] output)
+        {
+            Assert.Equal(ProductExceptSelf.Solve(input), output);
         }
     }
 }
