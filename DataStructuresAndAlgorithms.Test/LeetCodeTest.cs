@@ -111,5 +111,14 @@ namespace DataStructureAndAlgorithms.Test
         {
             Assert.Equal(ProductExceptSelf.Solve(input), output);
         }
+
+        [Theory]
+        [InlineData(new int[] { 3, 0, 1 }, 2)]
+        [InlineData(new int[] { 0, 1 }, 2)]
+        [InlineData(new int[] { 9, 6, 4, 2, 3, 5, 7, 0, 1 }, 8)]
+        public void MissingNumber_Test(int[] input, int output)
+        {
+            Assert.Equal(MissingNumber.Solve(input), output);
+        }
     }
 }
