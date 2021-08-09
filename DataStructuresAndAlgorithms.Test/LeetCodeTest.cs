@@ -139,5 +139,14 @@ namespace DataStructureAndAlgorithms.Test
         {
             Assert.Equal(ValidParentheses.Solve(input), output);
         }
+
+        [Theory]
+        [InlineData("leetcode", 0)]
+        [InlineData("loveleetcode", 2)]
+        [InlineData("aabb", -1)]
+        public void FirstUniqueCharacter_Test(string input, int output)
+        {
+            Assert.Equal(FirstUniqueCharacter.Solve(input), output);
+        }
     }
 }
