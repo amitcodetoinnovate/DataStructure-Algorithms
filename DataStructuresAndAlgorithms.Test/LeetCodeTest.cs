@@ -130,5 +130,14 @@ namespace DataStructureAndAlgorithms.Test
         {
             Assert.Equal(IntegerToEnglishWords.Solve(input), output);
         }
+
+        [Theory]
+        [InlineData("()[]{}", true)]
+        [InlineData("(]", false)]
+        [InlineData("{[]}", true)]
+        public void ValidParentheses_Test(string input, bool output)
+        {
+            Assert.Equal(ValidParentheses.Solve(input), output);
+        }
     }
 }
