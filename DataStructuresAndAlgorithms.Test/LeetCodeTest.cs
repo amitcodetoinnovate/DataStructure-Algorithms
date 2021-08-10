@@ -122,6 +122,14 @@ namespace DataStructureAndAlgorithms.Test
         }
 
         [Theory]
+        [InlineData(new int[] { 4, 2, 0, 3, 2, 5 }, 9)]
+        [InlineData(new int[] { 0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1 }, 6)]
+        public void TrappingRainWater_Test(int[] input, int output)
+        {
+            Assert.Equal(TrappingRainWater.Solve(input), output);
+        }
+
+        [Theory]
         [InlineData(123, "One Hundred Twenty Three")]
         [InlineData(12345, "Twelve Thousand Three Hundred Forty Five")]
         [InlineData(1234567, "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven")]
