@@ -148,13 +148,21 @@ namespace DataStructureAndAlgorithms.Test
         {
             Assert.Equal(FirstUniqueCharacter.Solve(input), output);
         }
-        
+
         [Theory]
-        [InlineData("Bob hit a ball, the hit BALL flew far after it was hit.", new string[] { "hit" },"ball")]
-        [InlineData("a.", new string[] { },"a")]
-        public void MostCommonWord_Test(string input, string[] banned,string ans)
+        [InlineData("Bob hit a ball, the hit BALL flew far after it was hit.", new string[] { "hit" }, "ball")]
+        [InlineData("a.", new string[] { }, "a")]
+        public void MostCommonWord_Test(string input, string[] banned, string ans)
         {
-            Assert.Equal(MostCommonWord.Solve(input,banned), ans);
+            Assert.Equal(MostCommonWord.Solve(input, banned), ans);
+        }
+
+        [Theory]
+        [InlineData(new string[] { "dig1 8 1 5 1", "let1 art can", "dig2 3 6", "let2 own kit dig", "let3 art zero" }, new string[] { "let1 art can", "let3 art zero", "let2 own kit dig", "dig1 8 1 5 1", "dig2 3 6" })]
+        [InlineData(new string[] { "1 n u", "r 527", "j 893", "6 14", "6 82" }, new string[] { "1 n u", "r 527", "j 893", "6 14", "6 82" })]
+        public void ReorderDataInLogFiles_Test(string[] input, string[] ans)
+        {
+            Assert.Equal(ReorderDataInLogFiles.Solve(input), ans);
         }
     }
 }
