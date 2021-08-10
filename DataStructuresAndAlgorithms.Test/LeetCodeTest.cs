@@ -148,5 +148,13 @@ namespace DataStructureAndAlgorithms.Test
         {
             Assert.Equal(FirstUniqueCharacter.Solve(input), output);
         }
+        
+        [Theory]
+        [InlineData("Bob hit a ball, the hit BALL flew far after it was hit.", new string[] { "hit" },"ball")]
+        [InlineData("a.", new string[] { },"a")]
+        public void MostCommonWord_Test(string input, string[] banned,string ans)
+        {
+            Assert.Equal(MostCommonWord.Solve(input,banned), ans);
+        }
     }
 }
