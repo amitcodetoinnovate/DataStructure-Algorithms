@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using Algorithms;
 using Algorithms.Leetcode;
+using DataStructures;
 using Xunit;
 
 namespace DataStructureAndAlgorithms.Test
@@ -171,6 +172,25 @@ namespace DataStructureAndAlgorithms.Test
         public void ReorderDataInLogFiles_Test(string[] input, string[] ans)
         {
             Assert.Equal(ReorderDataInLogFiles.Solve(input), ans);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 5, 4, 3, 2, 1})]
+        [InlineData(new int[] { 1 ,2, 3 }, new int[] { 3,2,1})]
+        public void ReverseLinkedList_Test(int[] input, int[] output)
+        {
+            ListNode dummyInput = new ListNode(0);
+            ListNode dummyOutPut = new ListNode(0);
+            for (int i = 0; i < input.Length; i++,dummyOutPut = dummyOutPut.next,dummyInput=dummyInput.next)
+            {
+                dummyInput.next = new ListNode(input[i]);
+                dummyOutPut.next = new ListNode(output[output.Length-i-1]);
+
+            }
+            ListNode ansIterativeHead = ReverseLinkedList.SolveIterative(dummyInput.next);
+            ListNode ansRecursiveHead = ReverseLinkedList.SolveIterative(dummyOutPut.next);
+            Assert.Equal(ansIterativeHead, dummyOutPut.next);
+            Assert.Equal(ansRecursiveHead, dummyOutPut.next);
         }
     }
 }
