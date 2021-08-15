@@ -192,5 +192,24 @@ namespace DataStructureAndAlgorithms.Test
             Assert.Equal(ansIterativeHead, dummyOutPut.next);
             Assert.Equal(ansRecursiveHead, dummyOutPut.next);
         }
+
+        [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 2, 1, 4, 3, 5 }, 2)]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 3, 2, 1, 4, 5 }, 3)]
+        public void ReverseNodesKGroup_Test(int[] input, int[] output,int k)
+        {
+            ListNode dummyInput = new ListNode(0);
+            ListNode dummyOutPut = new ListNode(0);
+            for (int i = 0; i < input.Length; i++, dummyOutPut = dummyOutPut.next, dummyInput = dummyInput.next)
+            {
+                dummyInput.next = new ListNode(input[i]);
+                dummyOutPut.next = new ListNode(output[output.Length - i - 1]);
+
+            }
+            ListNode ansIterativeHead = ReverseNodesKGroup.SolveIterative(dummyInput.next,k);
+            ListNode ansRecursiveHead = ReverseNodesKGroup.SolveIterative(dummyOutPut.next,k);
+            Assert.Equal(ansIterativeHead, dummyOutPut.next);
+            Assert.Equal(ansRecursiveHead, dummyOutPut.next);
+        }
     }
 }
