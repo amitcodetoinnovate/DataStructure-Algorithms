@@ -1,0 +1,15 @@
+﻿Requirements for Parking Lot
+
+1.There should be multiple floors in the Parking lot.
+
+2. There should be multiple gates in the Parking lot.
+
+3. There should be a parking attendant at each gate.
+
+4. The entry gate should process parking ticket.
+
+5. The exit gate should process payment on an hourly basis.
+
+6. The parking lot should have parking facility for differnt types of vehicles.
+
+7. There should be display boards at each floor showing the detail of vacant spots on the floor.
