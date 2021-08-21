@@ -6,7 +6,6 @@ namespace AlgorithmsPartI
     {
         private T[] _pq;
         private int _n;
-        //private IComparer<T> _comparer;
 
         public MinPQ(int capacity)
         {
@@ -49,21 +48,11 @@ namespace AlgorithmsPartI
         private bool Greater(int i, int j)
         {
             return _pq[i].CompareTo(_pq[j]) > 0;
-            //if (_comparer == null)
-            //{
-            //    return _pq[i].CompareTo(_pq[j]) < 0;
-            //}
-            //else
-            //{
-            //    return _comparer.Compare(_pq[i], _pq[j]) < 0;
-            //}
         }
 
         private void Exchange(int i, int j)
         {
-            T swap = _pq[i];
-            _pq[i] = _pq[j];
-            _pq[j] = swap;
+            (_pq[i], _pq[j]) = (_pq[j], _pq[i]);
         }
 
         private void Sink(int k)

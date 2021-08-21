@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructuresAndAlgorithms
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AlgorithmsPart-I", "AlgorithmsPartI\AlgorithmsPart-I.csproj", "{711BAE8D-0307-4142-A5D9-553E89616642}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LowLevelDesigns", "LowLevelDesigns\LowLevelDesigns.csproj", "{E2E7FD95-2693-4CFB-845D-40566621D540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LowLevelDesigns", "LowLevelDesigns\LowLevelDesigns.csproj", "{E2E7FD95-2693-4CFB-845D-40566621D540}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playground", "Playground\Playground.csproj", "{B0717C01-05D5-4390-B881-A1392978F0E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E2E7FD95-2693-4CFB-845D-40566621D540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2E7FD95-2693-4CFB-845D-40566621D540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2E7FD95-2693-4CFB-845D-40566621D540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0717C01-05D5-4390-B881-A1392978F0E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0717C01-05D5-4390-B881-A1392978F0E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0717C01-05D5-4390-B881-A1392978F0E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0717C01-05D5-4390-B881-A1392978F0E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
