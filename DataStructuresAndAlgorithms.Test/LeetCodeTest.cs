@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Algorithms;
 using Algorithms.Leetcode;
@@ -175,16 +176,16 @@ namespace DataStructureAndAlgorithms.Test
         }
 
         [Theory]
-        [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 5, 4, 3, 2, 1})]
-        [InlineData(new int[] { 1 ,2, 3 }, new int[] { 3,2,1})]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 5, 4, 3, 2, 1 })]
+        [InlineData(new int[] { 1, 2, 3 }, new int[] { 3, 2, 1 })]
         public void ReverseLinkedList_Test(int[] input, int[] output)
         {
             ListNode dummyInput = new ListNode(0);
             ListNode dummyOutPut = new ListNode(0);
-            for (int i = 0; i < input.Length; i++,dummyOutPut = dummyOutPut.next,dummyInput=dummyInput.next)
+            for (int i = 0; i < input.Length; i++, dummyOutPut = dummyOutPut.next, dummyInput = dummyInput.next)
             {
                 dummyInput.next = new ListNode(input[i]);
-                dummyOutPut.next = new ListNode(output[output.Length-i-1]);
+                dummyOutPut.next = new ListNode(output[output.Length - i - 1]);
 
             }
             ListNode ansIterativeHead = ReverseLinkedList.SolveIterative(dummyInput.next);
@@ -196,7 +197,7 @@ namespace DataStructureAndAlgorithms.Test
         [Theory]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 2, 1, 4, 3, 5 }, 2)]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, new int[] { 3, 2, 1, 4, 5 }, 3)]
-        public void ReverseNodesKGroup_Test(int[] input, int[] output,int k)
+        public void ReverseNodesKGroup_Test(int[] input, int[] output, int k)
         {
             ListNode dummyInput = new ListNode(0);
             ListNode dummyOutPut = new ListNode(0);
@@ -206,12 +207,12 @@ namespace DataStructureAndAlgorithms.Test
                 dummyOutPut.next = new ListNode(output[output.Length - i - 1]);
 
             }
-            ListNode ansIterativeHead = ReverseNodesKGroup.SolveIterative(dummyInput.next,k);
-            ListNode ansRecursiveHead = ReverseNodesKGroup.SolveIterative(dummyOutPut.next,k);
+            ListNode ansIterativeHead = ReverseNodesKGroup.SolveIterative(dummyInput.next, k);
+            ListNode ansRecursiveHead = ReverseNodesKGroup.SolveIterative(dummyOutPut.next, k);
             Assert.Equal(ansIterativeHead, dummyOutPut.next);
             Assert.Equal(ansRecursiveHead, dummyOutPut.next);
         }
-        
+
         [Fact]
         public void CopyListRandomPointer_Test()
         {
@@ -233,13 +234,19 @@ namespace DataStructureAndAlgorithms.Test
             n1.random = n7;
 
 
-            
+
             Node ansPointereHead = CopyListRandomPointer.CopyListWithRandomPointersIterative(n7);
             Node ansIterativeHead = CopyListRandomPointer.CopyListWithRandomPointers(n7);
             Node ansRecursiveHead = CopyListRandomPointer.CopyListWithRandomPointersRecursive(n7);
             //Assert.Equal(ansPointereHead, n7);
             //Assert.Equal(ansIterativeHead, n7);
             Assert.Equal(ansRecursiveHead, n7);
+        }
+
+        [Fact]
+        public void WordLadder_Test()
+        {
+            WordLadder.LadderLength("hit", "cog", new List<string> { "hot", "dot", "dog", "lot", "log", "cog" });
         }
     }
 }
