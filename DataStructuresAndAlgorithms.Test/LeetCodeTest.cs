@@ -248,5 +248,12 @@ namespace DataStructureAndAlgorithms.Test
         {
             WordLadder.LadderLength("hit", "cog", new List<string> { "hot", "dot", "dog", "lot", "log", "cog" });
         }
+
+        [Fact]
+        public void WordLadderII_Test()
+        {
+            WordLadderII.FindLadder("hit", "cog", new List<string> { "hot", "dot", "dog", "lot", "log", "cog" });
+            WordLadderII.FindLadder("a", "c", new List<string> { "a", "b", "c" });
+        }
     }
 }
