@@ -255,5 +255,18 @@ namespace DataStructureAndAlgorithms.Test
             WordLadderII.FindLadder("hit", "cog", new List<string> { "hot", "dot", "dog", "lot", "log", "cog" });
             WordLadderII.FindLadder("a", "c", new List<string> { "a", "b", "c" });
         }
+
+        [Fact]
+        public void NumberofIslands_Test()
+        {
+            NumberofIslands.NumIslands(new[]
+            {
+                new[] { '1', '1', '1' },
+                new[] { '0', '1', '0' },
+                new[] { '1', '1', '1' },
+
+            });
+        }
+        
     }
 }
