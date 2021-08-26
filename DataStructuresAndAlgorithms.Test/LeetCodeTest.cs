@@ -267,6 +267,20 @@ namespace DataStructureAndAlgorithms.Test
 
             });
         }
-        
+
+        [Fact]
+        public void CourseSchedule_Test()
+        {
+            CourseSchedule.CanFinish(20,new[]
+            {
+                new []{1,4},
+                new []{2,4},
+                new []{3,1},
+                new []{3,2},
+                
+
+            });
+        }
+
     }
 }
