@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Algorithms;
 using Algorithms.Leetcode;
+using Algorithms.Pramp;
 using DataStructures;
 using Xunit;
 
@@ -280,6 +281,17 @@ namespace DataStructureAndAlgorithms.Test
                 
 
             });
+
+            Stack<int> map = new Stack<int>();
+            map.Peek();
+        }
+        
+        [Fact]
+        public void ShiftedArraySearch_Test()
+        {
+
+
+            ShiftedArraySearch.Search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 0);
         }
 
     }
