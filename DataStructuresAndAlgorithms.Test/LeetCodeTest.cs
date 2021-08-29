@@ -285,7 +285,25 @@ namespace DataStructureAndAlgorithms.Test
             Stack<int> map = new Stack<int>();
             map.Peek();
         }
-        
+
+        [Fact]
+        public void GraphValidTree_Test()
+        {
+            GraphValidTree.ValidTree(5, new[]
+            {
+                new []{0,1},
+                new []{1, 2},
+                new []{2, 3},
+                new []{1, 3},
+                new []{1, 4}
+            });
+
+            Stack<int> map = new Stack<int>();
+            map.Peek();
+        }
+
+
+
         [Fact]
         public void ShiftedArraySearch_Test()
         {
