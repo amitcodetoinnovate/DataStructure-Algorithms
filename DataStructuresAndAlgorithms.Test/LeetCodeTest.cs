@@ -272,18 +272,15 @@ namespace DataStructureAndAlgorithms.Test
         [Fact]
         public void CourseSchedule_Test()
         {
-            CourseSchedule.CanFinish(20,new[]
+            CourseSchedule.CanFinish(20, new[]
             {
                 new []{1,4},
                 new []{2,4},
                 new []{3,1},
                 new []{3,2},
-                
+
 
             });
-
-            Stack<int> map = new Stack<int>();
-            map.Peek();
         }
 
         [Fact]
@@ -297,9 +294,17 @@ namespace DataStructureAndAlgorithms.Test
                 new []{1, 3},
                 new []{1, 4}
             });
-
-            Stack<int> map = new Stack<int>();
-            map.Peek();
+        }
+        [Fact]
+        public void MergeIntervals_Test()
+        {
+            MergeIntervals.Merge(new[]
+            {
+                new []{1,3},
+                new []{2, 6},
+                new []{8, 10},
+                new []{15, 18}
+            });
         }
 
 
@@ -307,9 +312,16 @@ namespace DataStructureAndAlgorithms.Test
         [Fact]
         public void ShiftedArraySearch_Test()
         {
-
-
             ShiftedArraySearch.Search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 0);
+        }
+
+        [Fact]
+        public void Permutations_Test()
+        {
+            Permutations.Permute(new int[]
+            {
+                1, 2, 3
+            });
         }
 
     }
