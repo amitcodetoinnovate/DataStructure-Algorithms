@@ -307,14 +307,6 @@ namespace DataStructureAndAlgorithms.Test
             });
         }
 
-
-
-        [Fact]
-        public void ShiftedArraySearch_Test()
-        {
-            ShiftedArraySearch.Search(new int[] { 4, 5, 6, 7, 0, 1, 2 }, 0);
-        }
-
         [Fact]
         public void Permutations_Test()
         {
