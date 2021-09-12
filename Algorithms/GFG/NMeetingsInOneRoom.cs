@@ -14,11 +14,17 @@ namespace Algorithms.GFG
             List<int[]> met = new List<int[]>();
             for (int i = 0; i < n; i++)
                 met.Add(new int[] { start[i], end[i] });
-            met.Sort((a, b) => a[0].CompareTo(b[0]) == 0 ? b[1].CompareTo(a[1]) : a[0].CompareTo(b[0]));
+            met.Sort((a, b) => a[1].CompareTo(b[1]) == 0 ? a[0].CompareTo(b[0]) : a[1].CompareTo(b[1]));
             int count = 1;
-            for (int i = 0; i < n - 1; i++)
-                if (met[i][1] < met[i + 1][0])
+            int prevEnd = met[0][1];
+            for (int i = 1; i < n; i++)
+            {
+                if (met[i][0] > prevEnd)
+                {
                     count++;
+                    prevEnd = met[i][1];
+                }
+            }
             return count;
         }
     }
