@@ -29,7 +29,6 @@ namespace AlgorithmsPartI
             Exchange(1, _n--);
             Sink(1);
             return min;
-            //_pq[_n + 1] = null;
         }
 
         public T Min()
