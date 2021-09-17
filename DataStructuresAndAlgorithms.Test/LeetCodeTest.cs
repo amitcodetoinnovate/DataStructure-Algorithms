@@ -333,6 +333,11 @@ namespace DataStructureAndAlgorithms.Test
         {
             MajorityElement.FindMajorityElement(new int[] { 3,2,2});
         }
-
+        
+        [Fact]
+        public void Power_Test()
+        {
+            Power.MyPow(2,3);
+        }
     }
 }
