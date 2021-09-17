@@ -328,5 +328,11 @@ namespace DataStructureAndAlgorithms.Test
             SetMatrixZeroes.SetZeroes(new int[][] { new int[] { 0 }, new int[] { 1 } });
         }
 
+        [Fact]
+        public void MajorityElement_Test()
+        {
+            MajorityElement.FindMajorityElement(new int[] { 3,2,2});
+        }
+
     }
 }
