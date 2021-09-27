@@ -44,5 +44,12 @@ namespace DataStructuresAndAlgorithms.Test
             
             FractionalKnapsack.KnapSack(50,new Item[] { new Item(60,  10), new Item(100, 20), new Item(120, 30)}, 3);
         }
+
+        [Fact]
+        public void MinimumswapsandKtogether_Test()
+        {
+
+            MinimumswapsandKtogether.minSwap(new int[]{ 4, 16, 3, 8, 13, 2, 19, 4, 12, 2, 7, 17, 4, 19, 1 }, 15, 9);
+        }
     }
 }
