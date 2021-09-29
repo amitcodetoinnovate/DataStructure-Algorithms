@@ -217,13 +217,13 @@ namespace DataStructureAndAlgorithms.Test
         [Fact]
         public void CopyListRandomPointer_Test()
         {
-            Node dummyInput = new Node(0);
-            Node head = dummyInput;
-            var n7 = new Node(7);
-            var n13 = new Node(13);
-            var n11 = new Node(11);
-            var n10 = new Node(10);
-            var n1 = new Node(1);
+            NodeWithRandom dummyInput = new NodeWithRandom(0);
+            NodeWithRandom head = dummyInput;
+            var n7 = new NodeWithRandom(7);
+            var n13 = new NodeWithRandom(13);
+            var n11 = new NodeWithRandom(11);
+            var n10 = new NodeWithRandom(10);
+            var n1 = new NodeWithRandom(1);
             n7.next = n13;
             n7.random = null;
             n13.next = n11;
@@ -236,9 +236,9 @@ namespace DataStructureAndAlgorithms.Test
 
 
 
-            Node ansPointereHead = CopyListRandomPointer.CopyListWithRandomPointersIterative(n7);
-            Node ansIterativeHead = CopyListRandomPointer.CopyListWithRandomPointers(n7);
-            Node ansRecursiveHead = CopyListRandomPointer.CopyListWithRandomPointersRecursive(n7);
+            NodeWithRandom ansPointereHead = CopyListRandomPointer.CopyListWithRandomPointersIterative(n7);
+            NodeWithRandom ansIterativeHead = CopyListRandomPointer.CopyListWithRandomPointers(n7);
+            NodeWithRandom ansRecursiveHead = CopyListRandomPointer.CopyListWithRandomPointersRecursive(n7);
             //Assert.Equal(ansPointereHead, n7);
             //Assert.Equal(ansIterativeHead, n7);
             Assert.Equal(ansRecursiveHead, n7);

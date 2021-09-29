@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace DataStructures
 {
-    public class Node
+    public class NodeWithRandom
     {
         public int val { get; set; }
-        public Node next { get; set; }
-        public Node random { get; set; }
+        public NodeWithRandom next { get; set; }
+        public NodeWithRandom random { get; set; }
 
-        public Node(int val)
+        public NodeWithRandom(int val)
         {
             this.val = val;
         }

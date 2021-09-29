@@ -6,13 +6,13 @@ namespace Algorithms.Leetcode
 {
     public class CopyListRandomPointer
     {
-        public static Node CopyListWithRandomPointersRecursive(Node head)
+        public static NodeWithRandom CopyListWithRandomPointersRecursive(NodeWithRandom head)
         {
-            Dictionary<Node, Node> map = new Dictionary<Node, Node>();
+            Dictionary<NodeWithRandom, NodeWithRandom> map = new Dictionary<NodeWithRandom, NodeWithRandom>();
             return RecursiveHelper(head, map);
         }
 
-        public static Node RecursiveHelper(Node head, Dictionary<Node, Node> map)
+        public static NodeWithRandom RecursiveHelper(NodeWithRandom head, Dictionary<NodeWithRandom, NodeWithRandom> map)
         {
             if (head == null)
                 return null;
@@ -20,25 +20,25 @@ namespace Algorithms.Leetcode
             if (map.ContainsKey(head))
                 return map[head];
 
-            Node node = new Node(head.val);
-            map.Add(head, node);
+            NodeWithRandom nodeWithRandom = new NodeWithRandom(head.val);
+            map.Add(head, nodeWithRandom);
 
-            node.next = RecursiveHelper(head.next, map);
-            node.random = RecursiveHelper(head.next, map);
-            return node;
+            nodeWithRandom.next = RecursiveHelper(head.next, map);
+            nodeWithRandom.random = RecursiveHelper(head.next, map);
+            return nodeWithRandom;
         }
 
-        public static Node CopyListWithRandomPointersIterative(Node head)
+        public static NodeWithRandom CopyListWithRandomPointersIterative(NodeWithRandom head)
         {
-            Dictionary<Node, Node> map = new Dictionary<Node, Node>();
-            Node headDummy = new Node(-1);
-            for (Node dummy = headDummy; head != null; head = head.next, dummy = dummy.next)
+            Dictionary<NodeWithRandom, NodeWithRandom> map = new Dictionary<NodeWithRandom, NodeWithRandom>();
+            NodeWithRandom headDummy = new NodeWithRandom(-1);
+            for (NodeWithRandom dummy = headDummy; head != null; head = head.next, dummy = dummy.next)
             {
                 if (!map.ContainsKey(head))
-                    map.Add(head, new Node(head.val));
+                    map.Add(head, new NodeWithRandom(head.val));
 
                 if (head.random != null && !map.ContainsKey(head.random))
-                    map.Add(head.random, new Node(head.random.val));
+                    map.Add(head.random, new NodeWithRandom(head.random.val));
 
                 dummy.next = map[head];
                 dummy.next.random = head.random == null ? null : map[head.random];
@@ -47,17 +47,17 @@ namespace Algorithms.Leetcode
             return headDummy.next;
         }
 
-        public static Node CopyListWithRandomPointers(Node head)
+        public static NodeWithRandom CopyListWithRandomPointers(NodeWithRandom head)
         {
             if (head == null)
                 return null;
-            Node ptr = head;
+            NodeWithRandom ptr = head;
             while (ptr != null)
             {
-                Node newNode = new Node(ptr.val);
-                newNode.next = ptr.next;
-                ptr.next = newNode;
-                ptr = newNode.next;
+                NodeWithRandom newNodeWithRandom = new NodeWithRandom(ptr.val);
+                newNodeWithRandom.next = ptr.next;
+                ptr.next = newNodeWithRandom;
+                ptr = newNodeWithRandom.next;
             }
 
             ptr = head;
@@ -66,9 +66,9 @@ namespace Algorithms.Leetcode
                 ptr.next.random = ptr.random != null ? ptr.random.next : null;
                 ptr = ptr.next.next;
             }
-            Node ptr_old = head;
-            Node ptr_new = head.next;
-            Node head_old = head.next;
+            NodeWithRandom ptr_old = head;
+            NodeWithRandom ptr_new = head.next;
+            NodeWithRandom head_old = head.next;
             while (ptr_old != null)
             {
                 ptr_old.next = ptr_old.next.next;
