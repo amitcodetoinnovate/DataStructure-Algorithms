@@ -3,11 +3,10 @@ using System.Collections.Generic;
 
 namespace AlgorithmsPartI
 {
-    public class MaxPQ<T> where T : IComparable<T> //class for custome comparer
+    public class MaxPQ<T> where T : IComparable<T>
     {
-        private T[] _pq;
+        private readonly T[] _pq;
         private int _n;
-        //private IComparer<T> _comparer;
 
         public MaxPQ(int capacity)
         {
@@ -30,7 +29,6 @@ namespace AlgorithmsPartI
             T max = _pq[1];
             Exchange(1, _n--);
             Sink(1);
-            //_pq[_n + 1] = null;
         }
 
         public T Max()
@@ -49,14 +47,6 @@ namespace AlgorithmsPartI
         private bool Less(int i, int j)
         {
             return _pq[i].CompareTo(_pq[j]) < 0;
-            //if (_comparer == null)
-            //{
-            //    return _pq[i].CompareTo(_pq[j]) < 0;
-            //}
-            //else
-            //{
-            //    return _comparer.Compare(_pq[i], _pq[j]) < 0;
-            //}
         }
 
         private void Exchange(int i, int j)
