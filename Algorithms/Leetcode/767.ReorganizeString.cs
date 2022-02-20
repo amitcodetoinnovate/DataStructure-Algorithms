@@ -8,7 +8,7 @@ namespace Algorithms.Leetcode
 {
     public class ReorganizeString
     {
-        public string ReorganizeString(string s)
+        public string Solve(string str)
         {
             int[] arr = new int[26];
 

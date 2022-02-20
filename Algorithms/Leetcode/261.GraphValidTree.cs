@@ -41,8 +41,6 @@ namespace Algorithms.Leetcode
             }
 
             return parent.Count == n;
-
-            return true;
         }
     }
 }

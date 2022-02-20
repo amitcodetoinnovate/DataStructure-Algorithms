@@ -319,7 +319,7 @@ namespace DataStructureAndAlgorithms.Test
         [Fact]
         public void MaxSubArray_Test()
         {
-            MaximumSubarray.Solve(new int[] {-2, 1, -3, 4, -1, 2, 1, -5, 4 });
+            MaximumSubarray.Solve(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 });
         }
 
         [Fact]
@@ -331,13 +331,13 @@ namespace DataStructureAndAlgorithms.Test
         [Fact]
         public void MajorityElement_Test()
         {
-            MajorityElement.FindMajorityElement(new int[] { 3,2,2});
+            MajorityElement.FindMajorityElement(new int[] { 3, 2, 2 });
         }
-        
+
         [Fact]
         public void Power_Test()
         {
-            Power.MyPow(2,3);
+            Power.MyPow(2, 3);
         }
 
         [Fact]
@@ -351,6 +351,26 @@ namespace DataStructureAndAlgorithms.Test
             one.right = three;
             two.right = five;
             BinaryTreePaths.GetBinaryTreePaths(one);
+        }
+
+        [Theory]
+        [InlineData("aa", "*")]
+        //[InlineData("","")]
+        public void WildcardMatching_Test(string s, string p)
+        {
+            WildcardMatching.IsMatch(s, p);
+        }
+
+        [Fact]
+        public void Power_T()
+        {
+            Sol.Solution(new int[] { 2, 1, 1, 3, 2, 1, 1, 3 });
+        }
+
+        [Fact]
+        public void LongestCommonSubsequence_Test()
+        {
+            LongestCommonSubsequence.LCS("abcde", "ace");
         }
     }
 }
