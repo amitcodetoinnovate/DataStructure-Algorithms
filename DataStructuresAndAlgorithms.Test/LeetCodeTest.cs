@@ -11,6 +11,7 @@ namespace DataStructureAndAlgorithms.Test
 {
     public class LeetCodeTest
     {
+
         [Theory]
         [InlineData(new int[] { 7, 1, 5, 3, 6, 4 }, 7)]
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, 4)]
@@ -371,6 +372,18 @@ namespace DataStructureAndAlgorithms.Test
         public void LongestCommonSubsequence_Test()
         {
             LongestCommonSubsequence.LCS("abcde", "ace");
+        }
+
+        [Fact]
+        public void PascalsTriangle_Test()
+        {
+            PascalsTriangle.Generate(5);
+        }
+
+        [Fact]
+        public void NextPermutation_Test()
+        {
+            NextPermutation.NextPermute(new char[] { 'A', 'M', 'I', 'T' });
         }
     }
 }
