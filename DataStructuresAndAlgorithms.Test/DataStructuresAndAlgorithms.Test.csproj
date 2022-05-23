@@ -21,7 +21,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\AlgorithmsPartI\AlgorithmsPart-I.csproj" />
-    <ProjectReference Include="..\Algorithms\Algorithms.csproj" />
+    <ProjectReference Include="..\Algorithms\CodingProblem.csproj" />
+    <ProjectReference Include="..\CodingProblems\CodingProblems.csproj" />
   </ItemGroup>
 
 </Project>

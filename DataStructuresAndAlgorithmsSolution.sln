@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{39DCC410-86D8-421F-A715-533BCE57CF7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodingProblems", "CodingProblems\CodingProblems.csproj", "{39DCC410-86D8-421F-A715-533BCE57CF7A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructures", "DataStructures\DataStructures.csproj", "{C2877A36-7E8C-4383-A716-532F08242DD2}"
 EndProject

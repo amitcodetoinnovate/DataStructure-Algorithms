@@ -1,10 +1,8 @@
-using System;
+using Algorithms;
+using CodingProblems.Leetcode;
+using DataStructures;
 using System.Collections.Generic;
 using System.Linq;
-using Algorithms;
-using Algorithms.Leetcode;
-using Algorithms.Pramp;
-using DataStructures;
 using Xunit;
 
 namespace DataStructureAndAlgorithms.Test
@@ -383,7 +381,15 @@ namespace DataStructureAndAlgorithms.Test
         [Fact]
         public void NextPermutation_Test()
         {
-            NextPermutation.NextPermute(new char[] { 'A', 'M', 'I', 'T' });
+            //NextPermutation.NextPermute(new char[] { 'R', 'I', 'D', 'H','I' });
+            NextPermutation.NextPemute(new int[] { 1, 2, 3 });
+        }
+
+        [Fact]
+        public void FindFib_Test()
+        {
+            //NextPermutation.NextPermute(new char[] { 'R', 'I', 'D', 'H','I' });
+            Fibonacci.MainFib(12);
         }
     }
 }
