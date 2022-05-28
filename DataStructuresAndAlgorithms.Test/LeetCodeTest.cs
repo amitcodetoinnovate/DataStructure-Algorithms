@@ -391,5 +391,24 @@ namespace DataStructureAndAlgorithms.Test
             //NextPermutation.NextPermute(new char[] { 'R', 'I', 'D', 'H','I' });
             Fibonacci.MainFib(12);
         }
+
+        [Fact]
+        public void EscapetheSpreadingFire_Test()
+        {
+            EscapetheSpreadingFire sd = new EscapetheSpreadingFire();
+            int[][] add = new int[][] {
+                new int[]{ 0, 2, 0, 0, 0, 0, 0 },
+                new int[]{ 0, 0, 0, 2, 2, 1, 0 },
+                new int[]{ 0, 2, 0, 0, 1, 2, 0 },
+                new int[]{ 0, 0, 2, 2, 2, 0, 2 },
+                new int[]{ 0, 0, 0, 0, 0, 0, 0 } };
+            sd.MaximumMinutes(add);
+        }
     }
 }
+
+//[0,2,0,0,0,0,0],
+//[0,0,0,2,2,1,0],
+//[0,2,0,0,1,2,0],
+//[0,0,2,2,2,0,2],
+//[0,0,0,0,0,0,0]
