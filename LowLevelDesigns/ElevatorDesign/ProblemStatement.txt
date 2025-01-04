@@ -13,6 +13,23 @@ No of elevator may be added or removed.
 This should be generic elevator.
 Service elavtors are managed seperately.
 
-
++-----------------+     +---------------------+     +-----------------+     +-----------------+
+|   User (Floor)  | --> |   FloorInterface    | --> | ElevatorsController| --> |    Elevator     |
++-----------------+     +---------------------+     +-----------------+     +-----------------+
+        |                 |                     |                     |                     |
+1. Press Button   |     | 2. Raise Event/Notify|     | 3. Receive Request|     |                     |
+        |                 |                     |                     |                     |
+        |                 |                     | 4. Assign Elevator  |     |                     |
+        |                 |                     |                     |     | 5. Add Request     |
+        |                 |                     |                     |     |                     |
+        |                 |                     |                     | <-- | 6. Notify Observers|
+        |                 |                     |                     |     |                     |
+        |                 |                     |                     |     | 7. Move to Floor   |
+        |                 |                     |                     |     |                     |
+        |                 |                     |                     |     | 8. Open Doors      |
+        |                 |                     |                     |     |                     |
+        |                 |                     |                     |     | 9. Close Doors     |
+        |                 |                     |                     |     |                     |
++-----------------+     +---------------------+     +-----------------+     +-----------------+
 
 
