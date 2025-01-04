@@ -404,6 +404,36 @@ namespace DataStructureAndAlgorithms.Test
                 new int[]{ 0, 0, 0, 0, 0, 0, 0 } };
             sd.MaximumMinutes(add);
         }
+
+        [Fact]
+        public void MaxConsecutiveOnesIII_Test()
+        {
+            int[] arr = new int[] { 1,1,1,0,0,0,1,1,1,1,0};
+            MaxConsecutiveOnesIII.LongestOnes(arr, 2);
+        }
+
+        [Fact]
+        public void KthLargestElement_Test()
+        {
+            var x = new KThLargestElement();
+            x.FindKthLargest(new int[] { 0 }, 6);
+        }
+        
+        [Fact]
+        public void FinalArrayStateAfterKMultiplicationOperationsII_Test()
+        {
+            var x = new _3266FinalArrayStateAfterKMultiplicationOperationsII();
+            x.GetFinalState(new int[] {2,5},5,4);
+        }
+        [Fact]
+        public void Try_Trie()
+        {
+            var x = new _435NonOverlappingInterval();
+            var z = new int[][] { new int[] { 0, 0, 0 }, new int[] { 0, 0, 0 } };
+//            x.EraseOverlapIntervals(new int[][] { new int[] { 1, 2 }, new int[] { 2, 3 }, new int[] { 3, 4 }, new int[] { 1, 3 } });
+            x.EraseOverlapIntervals(new int[][] { new int[] { 1, 2 }, new int[] { 1,2 }, new int[] { 1,2 } });
+
+        }
     }
 }
 

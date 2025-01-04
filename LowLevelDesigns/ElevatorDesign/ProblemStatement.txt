@@ -1,0 +1,18 @@
+We have multiple elevator design system.
+Elevator should make full travel from top to bottom or back and forth. Depends on the passnger waiting.
+No. of elevators in the system is unknown.
+If a person on 5th floor presses the down button and also person on 7th floor also presses. Left should go to the 7th floor as well and then come down to 5th floor.
+Elevator should serves people in the same direction.
+Avoid starvation 5 person wants to go up and 1 person wants to go down. Then it should not starve the.
+If two person are going in the same directon and one lift is idle.
+How many people are there in elevator?
+Make the eleavator user friendly.
+No lift man.
+Can we stop the lift?
+No of elevator may be added or removed.
+This should be generic elevator.
+Service elavtors are managed seperately.
+
+
+
+
