@@ -6,6 +6,7 @@ namespace AlgorithmsPartI
     {
         public static void Sort<T>(T[] pq) where T : IComparable<T>
         {
+            // Heapify phase
             int n = pq.Length;
             int k;
             for (k = n / 2; k >= 1; k--)
