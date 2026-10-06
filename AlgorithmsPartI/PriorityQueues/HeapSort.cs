@@ -6,6 +6,8 @@ namespace AlgorithmsPartI
     {
         public static void Sort<T>(T[] pq) where T : IComparable<T>
         {
+            // Heapify phase
+            //Kyl: The heapify phase is the process of converting the array into a max-heap. This is done by calling the Sink method on each non-leaf node, starting from the last non-leaf node down to the root node. The last non-leaf node is at index n/2, where n is the length of the array.
             int n = pq.Length;
             int k;
             for (k = n / 2; k >= 1; k--)
